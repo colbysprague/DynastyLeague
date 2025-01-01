@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article with Pagination</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+
+<div class="hidden" >
+<!-- Owner Card -->
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="flex justify-end px-4 pt-4">
+  </div>
+  <div class="flex items-center space-x-4 p-4">
+    <img
+            class="w-16 h-16 rounded-full shadow-lg"
+            src="https://sleepercdn.com/avatars/thumbs/b3338675f635c2c1f42b469621d38ec6"
+            alt="Bonnie image"
+    />
+    <div>
+      <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Hawk Tua</h5>
+      <div class="flex flex-col mt-2">
+        <span class="text-sm text-gray-500 dark:text-gray-400">💪 12-2 Record</span>
+        <span class="text-sm text-gray-500 dark:text-gray-400">💍 1x Champ</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  End Owner Card-->
+
+<!--  Player Card-->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-end px-4 pt-4">
+    </div>
+    <div class="flex items-center space-x-4 p-4">
+      <div class="relative">
+        <!-- Player Image -->
+        <img
+                class="w-24 h-16 rounded-full shadow-lg"
+                src="https://sleepercdn.com/content/nfl/players/7049.jpg"
+                alt="Jawaun Jennings"
+        />
+        <!-- Smaller Image -->
+        <img
+                class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                src="https://sleepercdn.com/images/team_logos/nfl/sf.png"
+                alt="Smaller Icon"
+        />
+      </div>
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Jawaun Jennings</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">WR25</span>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  End Player Card-->
+
+</div>
+
+
+<body class="bg-gray-900 text-gray-300 font-sans min-h-screen flex flex-col">
+<!-- Header -->
+<header class="bg-gray-800 shadow">
+  <div class="container mx-auto px-4 py-6">
+    <h1 class="text-4xl font-extrabold text-white">2024 Dynasty League Awards</h1>
+    <p class="text-sm text-gray-500 mt-1">📅  January 1, 2025</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-4 py-8">
+  <!-- Page 1 -->
+  <div class="page" id="page-1">
+    <h2 class="text-2xl font-bold text-white mb-4">🏆 League Champion & Manager of the Year</h2>
+    <p class="text-gray-400 mb-6">
+
+    <!-- Owner Card -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex justify-end px-4">
+      </div>
+      <div class="flex items-center space-x-4 p-4">
+        <img
+                class="w-16 h-16 rounded-full shadow-lg"
+                src="https://sleepercdn.com/avatars/thumbs/b3338675f635c2c1f42b469621d38ec6"
+                alt="Bonnie image"
+        />
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Hawk Tua</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">💪 12-2 Record</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">💍 1x Champ</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">📋 1x Manager of the Year</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Owner Card-->
+    <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Lead the league in points for</li>
+        <li>Drafted 2 top 10 RB's in J. Gibbs (RB2) & K. Williams (RB7)</li>
+        <li>Won the chip with Kenny-Two-Gloves and Mason Rudolph (how?) </li>
+      </ul>
+    </div>
+  </div>
+<!-- End Page 1-->
+
+  <!-- Page 2 -->
+  <div class="page hidden" id="page-2">
+    <h2 class="text-2xl font-bold text-white mb-4">💎 Wavier Claim of the Year</h2>
+    <p class="text-gray-400 mb-6">
+
+      <!--  Player Card-->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex justify-end px-4">
+      </div>
+      <div class="flex items-center space-x-4 p-4">
+        <div class="relative">
+          <!-- Player Image -->
+          <img
+                  class="w-24 h-16 rounded-full shadow-lg"
+                  src="https://sleepercdn.com/content/nfl/players/7049.jpg"
+                  alt="Jawaun Jennings"
+          />
+          <!-- Smaller Image -->
+          <img
+                  class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                  src="https://sleepercdn.com/images/team_logos/nfl/sf.png"
+                  alt="Smaller Icon"
+          />
+        </div>
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Jauan Jennings</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">198.3 Points</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">WR25</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Player Card-->
+
+    <h2 class="text-2xl font-bold text-white mt-4 mb-4">Claimed By:</h2>
+    <!-- Owner Card -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+      <div class="flex justify-end px-4">
+      </div>
+      <div class="flex items-center space-x-4 p-4">
+        <img
+                class="w-16 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e
+                alt="Bonnie image"
+        />
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Bigsby's Big Boys</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">Colin Sprague</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">5-9 Record</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Owner Card-->
+
+    <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Claimed from waivers in Week 2</li>
+        <li>HM: J. Smith Picked up by M. Long</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page hidden" id="page-3">
+    <h2 class="text-2xl font-bold text-white mb-4">👶 Rookie of the Year</h2>
+    <p class="text-gray-400 mb-6">
+
+      <!--  Player Card-->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex justify-end px-4">
+      </div>
+      <div class="flex items-center space-x-4 p-4">
+        <div class="relative">
+          <!-- Player Image -->
+          <img
+                  class="w-24 h-16 rounded-full shadow-lg"
+                  src="https://sleepercdn.com/content/nfl/players/11604.jpg"
+                  alt="Brock Bowers"
+          />
+          <!-- Smaller Image -->
+          <img
+                  class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                  src="https://sleepercdn.com/images/team_logos/nfl/lv.png"
+                  alt="Smaller Icon"
+          />
+        </div>
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Brock Bowers</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">247.7 Points</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">TE1</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Player Card-->
+
+    <h2 class="text-2xl font-bold text-white mt-4 mb-4">Drafted (Round 6) By:</h2>
+    <!-- Owner Card -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+      <div class="flex justify-end px-4">
+      </div>
+      <div class="flex items-center space-x-4 p-4">
+        <img
+                class="w-16 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/avatars/thumbs/b319fdf8b7b5b0359d3c78622ba4d70c
+                alt="Bonnie image"
+        />
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">They hit the Twin Bowers</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">Travis Chesborough</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">7-7 Record</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Owner Card-->
+
+    <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>TE1 on a bad team with bad QB play</li>
+        <li>Honorable Mention: BTJ (C. Sprague) / M. Nabers (M. Long)</li>
+      </ul>
+    </div>
+  </div>
+<!--  End Page 3 -->
+
+<!-- Page 4 -->
+<div class="page hidden" id="page-4">
+  <h2 class="text-2xl font-bold text-white mb-4 line-through">🏃 Best RB</h2>
+  <h2 class="text-2xl font-bold text-white mb-4">🤾‍♂️ Best QB</h2>
+  <p class="text-gray-400 mb-6">
+
+    <!--  Player Card-->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-end px-4">
+    </div>
+    <div class="flex items-center space-x-4 p-4">
+      <div class="relative">
+        <!-- Player Image -->
+        <img
+                class="w-24 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/content/nfl/players/4881.jpg
+                alt="Brock Bowers"
+        />
+        <!-- Smaller Image -->
+        <img
+                class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                src="https://sleepercdn.com/images/team_logos/nfl/bal.png"
+                alt="Smaller Icon"
+        />
+      </div>
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Lamar Jackson</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">411.4 Points</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">QB1 (Obviously)</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Player Card-->
+
+  <h2 class="text-2xl font-bold text-white mt-4 mb-4">Drafted (Round 1) By:</h2>
+  <!-- Owner Card -->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+    <div class="flex justify-end px-4">
+    </div>
+    <div class="flex items-center space-x-4 p-4">
+      <img
+              class="w-16 h-16 rounded-full shadow-lg"
+              src=https://sleepercdn.com/avatars/thumbs/4f4090e5e9c3941414db40a871e3e909
+              alt="Bonnie image"
+      />
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Team Samt2733</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">Worst team name</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">5-9 Record</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Owner Card-->
+
+  <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+    <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Name your team next year brotha</li>
+      <li>HM J. Allen (M. Infantino) / J. Daniels (O. Kelley)</li>
+    </ul>
+  </div>
+</div>
+<!--  End Page 4-->
+
+<!-- Page 5 -->
+<div class="page hidden" id="page-5">
+  <h2 class="text-2xl font-bold text-white mb-4">💯 Offensive Player of the Year</h2>
+  <p class="text-gray-400 mb-6">
+
+    <!--  Player Card-->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-end px-4">
+    </div>
+    <div class="flex items-center space-x-4 p-4">
+      <div class="relative">
+        <!-- Player Image -->
+        <img
+                class="w-24 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/content/nfl/players/4866.jpg
+                alt="Brock Bowers"
+        />
+        <!-- Smaller Image -->
+        <img
+                class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                src="https://sleepercdn.com/images/team_logos/nfl/phi.png"
+                alt="Smaller Icon"
+        />
+      </div>
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Saquon Barkley</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">322.3 Points</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">RB1</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Player Card-->
+
+  <h2 class="text-2xl font-bold text-white mt-4 mb-4">Drafted (Round 3) By:</h2>
+  <!-- Owner Card -->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+    <div class="flex justify-end px-4">
+    </div>
+    <div class="flex items-center space-x-4 p-4">
+      <img
+              class="w-16 h-16 rounded-full shadow-lg"
+              src=https://sleepercdn.com/avatars/thumbs/b319fdf8b7b5b0359d3c78622ba4d70c
+              alt="Bonnie image"
+      />
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Team Parpano</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">Also shit team name</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">4-10 Record</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Owner Card-->
+
+  <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+    <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Name your team next year brotha</li>
+      <li>HM J. Gibbs (J. Proctor)</li>
+    </ul>
+  </div>
+</div>
+<!--  End Page 5 -->
+
+<!-- Page 7 -->
+<div class="page hidden" id="page-7">
+  <h2 class="text-2xl font-bold text-white mb-4">🥞 Stack of the Year</h2>
+  <p class="text-gray-400 mb-6">
+    Awarded to the best QB/WR duo from the same team
+  </p>
+
+<!--  Player Card-->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex items-center space-x-4 p-4">
+      <div class="relative">
+        <!-- Player Image -->
+        <img
+                class="w-24 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/content/nfl/players/3294.jpg
+                alt="Brock Bowers"
+        />
+        <!-- Smaller Image -->
+        <img
+                class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                src="https://sleepercdn.com/images/team_logos/nfl/dal.png"
+                alt="Smaller Icon"
+        />
+      </div>
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Dak Prescott</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">124.5 Points</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">QB20 (Before Injury)</span>
+        </div>
+      </div>
+    </div>
+      <div class="flex items-center space-x-4 p-4">
+      <div class="relative">
+        <!-- Player Image -->
+        <img
+                class="w-24 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/content/nfl/players/6786.jpg
+                alt="Brock Bowers"
+        />
+        <!-- Smaller Image -->
+        <img
+                class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                src="https://sleepercdn.com/images/team_logos/nfl/dal.png"
+                alt="Smaller Icon"
+        />
+      </div>
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Ceedee Lamb</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">162.4 Points</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">WR6</span>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  End Player Card-->
+
+  <h2 class="text-2xl font-bold text-white mt-4 mb-4">Drafted (Rounds 2 & 3) By:</h2>
+  <!-- Owner Card -->
+  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+    <div class="flex justify-end px-4">
+    </div>
+    <div class="flex items-center space-x-4 p-4">
+      <img
+              class="w-16 h-16 rounded-full shadow-lg"
+              src=https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e
+              alt="Bonnie image"
+      />
+      <div>
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Lisan Al Caleb</h5>
+        <div class="flex flex-col mt-2">
+          <span class="text-sm text-gray-500 dark:text-gray-400">Colby Sprague</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">10-4 Record</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Owner Card-->
+
+  <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+    <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>This was pretty much the only stack this year</li>
+      <li>I wanted an award lmao</li>
+    </ul>
+  </div>
+</div>
+<!--  End Page 6 -->
+  <!-- Page 5 -->
+  <div class="page hidden" id="page-6">
+    <h2 class="text-2xl font-bold text-white mb-4">League MVP</h2>
+    <p class="text-gray-400 mb-6">
+      Awarded to the most outstanding player from the league in that season
+    </p>
+
+    <!--  Player Card-->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex items-center space-x-4 p-4">
+        <div class="relative">
+          <!-- Player Image -->
+          <img
+                  class="w-24 h-16 rounded-full shadow-lg"
+                  src=https://sleepercdn.com/content/nfl/players/7564.jpg
+                  alt="Brock Bowers"
+          />
+          <!-- Smaller Image -->
+          <img
+                  class="absolute top-0 right-0 w-8 h-8 rounded-full  shadow-lg"
+                  src="https://sleepercdn.com/images/team_logos/nfl/cin.png"
+                  alt="Smaller Icon"
+          />
+        </div>
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Jamar Chase</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">377.3 Points</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">WR1 by 70</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Player Card-->
+
+    <h2 class="text-2xl font-bold text-white mt-4 mb-4">Drafted (Rounds 2 & 3) By:</h2>
+    <!-- Owner Card -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+      <div class="flex justify-end px-4">
+      </div>
+      <div class="flex items-center space-x-4 p-4">
+        <img
+                class="w-16 h-16 rounded-full shadow-lg"
+                src=https://sleepercdn.com/avatars/thumbs/b319fdf8b7b5b0359d3c78622ba4d70c
+                alt="Bonnie image"
+        />
+        <div>
+          <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Team Parpano</h5>
+          <div class="flex flex-col mt-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">Also shit team name</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">4-10 Record</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  End Owner Card-->
+
+    <div class="bg-gray-900 text-gray-300 p-6 rounded-lg">
+      <h2 class="text-2xl font-bold text-white mb-4">Notes:</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>HM: S. Barkley (Also P. Arpano)</li>
+        <li>How did bro go 4-10 </li>
+      </ul>
+    </div>
+  </div>
+  <!--  End Page 7 -->
+
+
+  <!-- Navigation -->
+  <div class="mt-6" id="btn-container">
+    <button id="next-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+      Next
+    </button>
+
+  </div>
+
+
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-500 py-6">
+  <div class="container mx-auto px-4 text-center">
+    <p>&copy; 2025 Your Website Name. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  const pages = document.querySelectorAll('.page');
+  const nextButton = document.getElementById('next-btn');
+  const backButton = document.createElement('button');
+  const buttonContainer = document.getElementById('btn-container')
+
+  // Set up the Back to Beginning button
+  backButton.id = 'back-btn';
+  backButton.textContent = 'Back to Beginning';
+  backButton.className = 'bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 hidden';
+  buttonContainer.appendChild(backButton); // Add the button to the page
+
+  let currentPage = 0;
+
+  nextButton.addEventListener('click', () => {
+    // Hide the current page
+    pages[currentPage].classList.add('hidden');
+
+    // Move to the next page
+    currentPage++;
+
+    // Show the next page if it exists
+    if (currentPage < pages.length) {
+      pages[currentPage].classList.remove('hidden');
+    }
+
+    // If on the last page, hide the Next button and show the Back button
+    if (currentPage === pages.length - 1) {
+      nextButton.classList.add('hidden');
+      backButton.classList.remove('hidden');
+    }
+  });
+
+  backButton.addEventListener('click', () => {
+    // Hide the current page
+    pages[currentPage].classList.add('hidden');
+
+    // Reset to the first page
+    currentPage = 0;
+    pages[currentPage].classList.remove('hidden');
+
+    // Show the Next button and hide the Back button
+    nextButton.classList.remove('hidden');
+    backButton.classList.add('hidden');
+  });
+</script>
+
+</body>
+</html>
